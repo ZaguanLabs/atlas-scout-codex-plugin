@@ -20,6 +20,19 @@ before installing the runtime. Do not weaken operating-system or organization se
 
 ## Install
 
+### OpenAI Plugins Directory
+
+Atlas Scout is published in the universal Plugins Directory shared by ChatGPT and Codex:
+
+<https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
+
+The directory entry installs the navigation and guarded setup skills. Atlas Scout remains a local
+`stdio` MCP server, so users who want its structural tools must also install the runtime and the
+MCP-enabled marketplace plugin below. This preserves local indexing instead of routing source code
+through a hosted MCP service.
+
+### Zaguán Labs Codex marketplace
+
 Install and verify the Atlas Scout runtime first:
 
 ```bash
@@ -44,10 +57,9 @@ and removal instructions.
 - A code-navigation skill describing Scout's capabilities and coverage boundaries
 - A guarded setup skill that never downloads or executes the runtime without explicit approval
 
-The public OpenAI Plugins Directory currently accepts local-tool products only as skills-only
-submissions; its **With MCP** flow requires a public production MCP URL. The directory package
-therefore supplies the same navigation and setup skills but excludes `.mcp.json`. Users who want
-the local server connection install this repository's plugin after installing the runtime.
+The OpenAI directory package supplies the same navigation and setup skills but excludes `.mcp.json`
+because its public **With MCP** flow requires a production HTTPS MCP URL. Users who want the local
+server connection install this repository's plugin after installing the runtime.
 
 ## Example prompts
 

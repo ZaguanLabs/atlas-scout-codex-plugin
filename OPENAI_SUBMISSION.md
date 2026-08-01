@@ -2,6 +2,19 @@
 
 This file is the reviewer-facing source of truth for the initial Atlas Scout submission.
 
+## Publication status
+
+- Status: **Approved and published**
+- Published: 2026-08-01
+- Directory listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
+- Published version: `1.0.0-preview.25`
+- Skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
+- Publisher identity shown by the directory: `Stig-Ørjan Smelror`
+- Public developer brand used by the source package: `Zaguán Labs`
+
+OpenAI approved the initial skills-only submission immediately after the publisher completed the
+policy attestations. The publisher then published the approved version from the portal.
+
 ## Submission shape
 
 - Shape: **Skills only**
@@ -20,7 +33,8 @@ excludes `.mcp.json` and `mcpServers`, as required for skills-only uploads.
 - Version: `1.0.0-preview.25`
 - Display name: `Atlas Scout`
 - Short description: `Local structural code maps`
-- Developer: `Zaguán Labs`
+- Developer in source manifest: `Zaguán Labs`
+- Verified publisher identity: `Stig-Ørjan Smelror`
 - Category: `Developer Tools`
 - Website: <https://atlasscout.dev>
 - Support: <https://atlasscout.dev/docs>
