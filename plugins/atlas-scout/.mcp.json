@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "atlas-scout": {
+      "command": "atlas-scout",
+      "args": [
+        "mcp"
+      ]
+    }
+  }
+}

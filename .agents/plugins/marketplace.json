@@ -1,0 +1,20 @@
+{
+  "name": "atlas-scout",
+  "interface": {
+    "displayName": "Atlas Scout"
+  },
+  "plugins": [
+    {
+      "name": "atlas-scout",
+      "source": {
+        "source": "local",
+        "path": "./plugins/atlas-scout"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
