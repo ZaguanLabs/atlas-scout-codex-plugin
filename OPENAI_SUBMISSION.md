@@ -7,14 +7,15 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 - Status: **Approved and published**
 - Published: 2026-08-01
 - Directory listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
-- Published version: `1.0.0-preview.25`
-- Prepared update: `1.0.0-preview.26` on 2026-08-03; portal upload and review pending
+- Published version: `1.0.0-preview.26`
+- Updated: 2026-08-03
 - Skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
 - Publisher identity shown by the directory: `Stig-Ørjan Smelror`
 - Public developer brand used by the source package: `Zaguán Labs`
 
 OpenAI approved the initial skills-only submission immediately after the publisher completed the
-policy attestations. The publisher then published the approved version from the portal.
+policy attestations. The publisher then published the approved version from the portal. The
+Preview 26 skills-only package was uploaded and published through the same listing on 2026-08-03.
 
 ## Submission shape
 
