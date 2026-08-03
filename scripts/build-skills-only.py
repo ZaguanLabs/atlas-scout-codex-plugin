@@ -13,7 +13,7 @@ from pathlib import Path
 REPOSITORY_ROOT = Path(__file__).resolve().parent.parent
 PLUGIN_ROOT = REPOSITORY_ROOT / "plugins" / "atlas-scout"
 OUTPUT_DIR = REPOSITORY_ROOT / "dist"
-ARCHIVE = OUTPUT_DIR / "atlas-scout-openai-skills-1.0.0-preview.25.zip"
+ARCHIVE = OUTPUT_DIR / "atlas-scout-openai-skills-1.0.0-preview.26.zip"
 
 
 def main() -> None:

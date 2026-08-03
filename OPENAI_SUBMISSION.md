@@ -1,6 +1,6 @@
 # OpenAI Plugins Directory submission
 
-This file is the reviewer-facing source of truth for the initial Atlas Scout submission.
+This file is the reviewer-facing source of truth for Atlas Scout directory submissions.
 
 ## Publication status
 
@@ -8,6 +8,7 @@ This file is the reviewer-facing source of truth for the initial Atlas Scout sub
 - Published: 2026-08-01
 - Directory listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
 - Published version: `1.0.0-preview.25`
+- Prepared update: `1.0.0-preview.26` on 2026-08-03; portal upload and review pending
 - Skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
 - Publisher identity shown by the directory: `Stig-Ørjan Smelror`
 - Public developer brand used by the source package: `Zaguán Labs`
@@ -18,7 +19,7 @@ policy attestations. The publisher then published the approved version from the 
 ## Submission shape
 
 - Shape: **Skills only**
-- Package: `dist/atlas-scout-openai-skills-1.0.0-preview.25.zip`
+- Package: `dist/atlas-scout-openai-skills-1.0.0-preview.26.zip`
 - Reason: Atlas Scout is deliberately local and uses `stdio`. OpenAI's public **With MCP** flow
   requires a public production HTTPS MCP URL, which would change Atlas Scout's privacy and
   deployment architecture. The public skill guides safe setup and correct use of the local tool.
@@ -30,7 +31,7 @@ excludes `.mcp.json` and `mcpServers`, as required for skills-only uploads.
 ## Listing fields
 
 - Plugin name: `atlas-scout`
-- Version: `1.0.0-preview.25`
+- Version: `1.0.0-preview.26`
 - Display name: `Atlas Scout`
 - Short description: `Local structural code maps`
 - Developer in source manifest: `Zaguán Labs`
@@ -61,11 +62,13 @@ range verification, and preserve text search, builds, and tests for the cases th
 
 ## Release notes
 
-Initial public submission of Atlas Scout for Codex. This skills-only package provides guarded setup
-instructions and structural code-navigation guidance for the separately installed local Atlas Scout
-runtime. It has no custom UI, external actions, authentication requirement, or bundled remote MCP
-server. Reviewers may use Atlas Scout Free with any local source repository; test cases and expected
-results are documented in `TESTING.md`.
+Preview 26 compatibility update for Atlas Scout for Codex. This skills-only package continues to
+provide guarded setup instructions and structural code-navigation guidance for the separately
+installed local Atlas Scout runtime. It has no custom UI, external actions, authentication
+requirement, or bundled remote MCP server. The skills and their safety boundaries remain compatible
+with the published submission; this update aligns the wrapper version with the current runtime.
+Reviewers may use Atlas Scout Free with any local source repository; test cases and expected results
+are documented in `TESTING.md`.
 
 ## Review materials
 
