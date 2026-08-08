@@ -4,11 +4,10 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 
 ## Publication status
 
-- Status: **Published listing; Preview 28 update pending**
-- Published: 2026-08-01
+- Status: **Approved and published**
+- Published: 2026-08-08
 - Directory listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
-- Published version: `1.0.0-preview.27`
-- Pending version: `1.0.0-preview.28`
+- Published version: `1.0.0-preview.28`
 - Updated: 2026-08-08
 - Skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
 - Publisher identity shown by the directory: `Stig-Ørjan Smelror`
@@ -17,8 +16,8 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 OpenAI approved the initial skills-only submission immediately after the publisher completed the
 policy attestations. The publisher then published the approved version from the portal. The
 Preview 26 skills-only package was uploaded and published through the same listing on 2026-08-03,
-followed by Preview 27 on 2026-08-04. Preview 28 is prepared for upload to the same listing; it is
-not recorded as published until the portal confirms publication.
+followed by Preview 27 on 2026-08-04. Preview 28 was uploaded, approved, and explicitly published
+through the same listing on 2026-08-08.
 
 ## Submission shape
 
