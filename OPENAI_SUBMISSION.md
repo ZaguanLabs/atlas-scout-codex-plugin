@@ -4,11 +4,12 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 
 ## Publication status
 
-- Status: **Approved and published**
+- Status: **Published listing; Preview 28 update pending**
 - Published: 2026-08-01
 - Directory listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
 - Published version: `1.0.0-preview.27`
-- Updated: 2026-08-04
+- Pending version: `1.0.0-preview.28`
+- Updated: 2026-08-08
 - Skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
 - Publisher identity shown by the directory: `Stig-Ørjan Smelror`
 - Public developer brand used by the source package: `Zaguán Labs`
@@ -16,12 +17,13 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 OpenAI approved the initial skills-only submission immediately after the publisher completed the
 policy attestations. The publisher then published the approved version from the portal. The
 Preview 26 skills-only package was uploaded and published through the same listing on 2026-08-03,
-followed by Preview 27 on 2026-08-04.
+followed by Preview 27 on 2026-08-04. Preview 28 is prepared for upload to the same listing; it is
+not recorded as published until the portal confirms publication.
 
 ## Submission shape
 
 - Shape: **Skills only**
-- Package: `dist/atlas-scout-openai-skills-1.0.0-preview.27.zip`
+- Package: `dist/atlas-scout-openai-skills-1.0.0-preview.28.zip`
 - Reason: Atlas Scout is deliberately local and uses `stdio`. OpenAI's public **With MCP** flow
   requires a public production HTTPS MCP URL, which would change Atlas Scout's privacy and
   deployment architecture. The public skill guides safe setup and correct use of the local tool.
@@ -33,7 +35,7 @@ excludes `.mcp.json` and `mcpServers`, as required for skills-only uploads.
 ## Listing fields
 
 - Plugin name: `atlas-scout`
-- Version: `1.0.0-preview.27`
+- Version: `1.0.0-preview.28`
 - Display name: `Atlas Scout`
 - Short description: `Local structural code maps`
 - Developer in source manifest: `Zaguán Labs`
@@ -64,7 +66,9 @@ range verification, and preserve text search, builds, and tests for the cases th
 
 ## Release notes
 
-Preview 27 compatibility update for Atlas Scout for Codex. This skills-only package continues to
+Preview 28 compatibility update for Atlas Scout for Codex. The navigation skill now names the
+ordinary questions that should activate it and uses the exact `symbol_architecture` tool name. This
+skills-only package continues to
 provide guarded setup instructions and structural code-navigation guidance for the separately
 installed local Atlas Scout runtime. It has no custom UI, external actions, authentication
 requirement, or bundled remote MCP server. The skills and their safety boundaries remain compatible

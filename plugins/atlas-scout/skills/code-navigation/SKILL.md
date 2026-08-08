@@ -1,6 +1,6 @@
 ---
 name: atlas-scout-code-navigation
-description: Use Atlas Scout for local structural code navigation involving definitions, symbols, callers, references, dependency paths, architecture, traces, or edit impact.
+description: Use Atlas Scout for local structural code navigation involving definitions, symbols, callers, references, dependency paths, architecture, traces, or edit impact. Use when asked where a symbol is defined, who calls or uses a function, what implements an interface, what breaks if code changes, or how a codebase is organized.
 ---
 
 # Atlas Scout code navigation
@@ -15,7 +15,7 @@ Choose the narrowest matching Scout capability:
 - If a file is known but the relevant range is not, use `symbol_outline` before reading the file.
 - If the location is unknown, use `symbol_search`, then `symbol_resolve` when exact metadata is
   needed.
-- Use `symbol_references`, `symbol_graph`, `symbol_trace`, `symbol_path`, `architecture`, or
+- Use `symbol_references`, `symbol_graph`, `symbol_trace`, `symbol_path`, `symbol_architecture`, or
   `edit_impact` for the corresponding structural question.
 - Read the exact source ranges returned by Atlas Scout before drawing conclusions or editing.
 
