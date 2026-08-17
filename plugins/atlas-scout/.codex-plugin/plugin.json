@@ -1,6 +1,6 @@
 {
   "name": "atlas-scout",
-  "version": "1.0.0-preview.28",
+  "version": "1.0.0-preview.29",
   "description": "Local, read-only structural code navigation for Codex",
   "author": {
     "name": "Zaguán Labs",

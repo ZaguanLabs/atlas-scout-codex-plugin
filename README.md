@@ -93,7 +93,7 @@ The repository validates both the MCP-enabled Codex plugin and the skills-only a
 python3 scripts/check.py
 ```
 
-The generated archive is written to `dist/atlas-scout-openai-skills-1.0.0-preview.28.zip`. Its
+The generated archive is written to `dist/atlas-scout-openai-skills-1.0.0-preview.29.zip`. Its
 manifest intentionally omits `mcpServers`, and the archive contains no `.mcp.json` or `.app.json`.
 
 ## Support, privacy, and licensing

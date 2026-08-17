@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = ROOT / "plugins" / "atlas-scout"
 MANIFEST = PLUGIN / ".codex-plugin" / "plugin.json"
-ARCHIVE = ROOT / "dist" / "atlas-scout-openai-skills-1.0.0-preview.28.zip"
+ARCHIVE = ROOT / "dist" / "atlas-scout-openai-skills-1.0.0-preview.29.zip"
 
 
 def require(condition: bool, message: str) -> None:
@@ -31,7 +31,7 @@ def png_dimensions(path: Path) -> tuple[int, int]:
 def main() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     require(manifest["name"] == "atlas-scout", "unexpected plugin name")
-    require(manifest["version"] == "1.0.0-preview.28", "unexpected plugin version")
+    require(manifest["version"] == "1.0.0-preview.29", "unexpected plugin version")
     require(manifest["mcpServers"] == "./.mcp.json", "missing MCP manifest reference")
     require(manifest["interface"]["category"] == "Developer Tools", "unexpected category")
     require(len(manifest["interface"]["shortDescription"]) <= 30, "short description is too long")
