@@ -12,6 +12,9 @@ This file is the reviewer-facing source of truth for Atlas Scout directory submi
 - Updated: 2026-08-17
 - Prepared package SHA-256: `e96673f837ac41fd968916975f7c750f1ebe02cca3d2ded8431c37cface6d743`
 - Local package validation: passed on 2026-08-17; five expected members, no MCP/app configuration
+- Public GitHub marketplace validation: passed on 2026-08-17; an ephemeral Codex session loaded
+  the Preview 29 skill, called `atlas-scout.symbol_search` once, and resolved the indexed probe to
+  `src/lib.rs:1-3`
 - Last published skill scans: `atlas-scout-code-navigation` passed; `atlas-scout-setup` passed
 - Publisher identity shown by the directory: `Stig-Ørjan Smelror`
 - Public developer brand used by the source package: `Zaguán Labs`
