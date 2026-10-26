@@ -11,14 +11,14 @@ from pathlib import Path
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parent.parent
-PLUGIN_ROOT = REPOSITORY_ROOT / "plugins" / "atlas-scout"
+PLUGIN_ROOT = REPOSITORY_ROOT / "plugins" / "bitlantern"
 OUTPUT_DIR = REPOSITORY_ROOT / "dist"
-ARCHIVE = OUTPUT_DIR / "atlas-scout-openai-skills-1.0.0-preview.29.zip"
+ARCHIVE = OUTPUT_DIR / "bitlantern-openai-skills-1.0.0-preview.30.zip"
 
 
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="atlas-scout-openai-") as temporary:
+    with tempfile.TemporaryDirectory(prefix="bitlantern-openai-") as temporary:
         stage = Path(temporary)
         shutil.copytree(PLUGIN_ROOT / "skills", stage / "skills")
         (stage / "assets").mkdir()

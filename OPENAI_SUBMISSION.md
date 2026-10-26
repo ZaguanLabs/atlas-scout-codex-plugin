@@ -1,5 +1,25 @@
 # OpenAI Plugins Directory submission
 
+The pending Preview 30 package uses the Bit Lantern name. Update the existing listing; do not create a duplicate.
+
+## Preview 30 publication status
+
+- Status: native Preview 30 verified public; exact skills-only ZIP prepared; portal submission pending
+- Pending version: `1.0.0-preview.30`
+- Last published version: `1.0.0-preview.29` (Atlas Scout), 2026-08-17
+- Listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
+- Package: `dist/bitlantern-openai-skills-1.0.0-preview.30.zip`
+- Package SHA-256: `2ff3cc12423aebcb4aaccc20e6325a5ee4c840a996ca7f70232778754c0d35ca`
+- Local validation: five expected ZIP members; both skills and canonical Lantern assets; no MCP/app configuration
+- Display name: Bit Lantern
+- Repository: <https://github.com/ZaguanLabs/atlas-scout-codex-plugin>
+- Release notes: First Bit Lantern release; separate update channel, native Zsh navigation, Markdown document graphs, and host-integration fixes. Existing Atlas Scout installations remain on their separate channel.
+- Required scans: `bitlantern-code-navigation` and `bitlantern-setup`
+- Submit after verifying the native public release and package. Record observed submission, approval, and publication separately.
+
+## Previous submission record
+
+
 This file is the reviewer-facing source of truth for Atlas Scout directory submissions.
 
 ## Publication status

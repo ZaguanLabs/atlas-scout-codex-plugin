@@ -12,9 +12,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-PLUGIN = ROOT / "plugins" / "atlas-scout"
+PLUGIN = ROOT / "plugins" / "bitlantern"
 MANIFEST = PLUGIN / ".codex-plugin" / "plugin.json"
-ARCHIVE = ROOT / "dist" / "atlas-scout-openai-skills-1.0.0-preview.29.zip"
+ARCHIVE = ROOT / "dist" / "bitlantern-openai-skills-1.0.0-preview.30.zip"
 
 
 def require(condition: bool, message: str) -> None:
@@ -30,16 +30,16 @@ def png_dimensions(path: Path) -> tuple[int, int]:
 
 def main() -> None:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    require(manifest["name"] == "atlas-scout", "unexpected plugin name")
-    require(manifest["version"] == "1.0.0-preview.29", "unexpected plugin version")
+    require(manifest["name"] == "bitlantern", "unexpected plugin name")
+    require(manifest["version"] == "1.0.0-preview.30", "unexpected plugin version")
     require(manifest["mcpServers"] == "./.mcp.json", "missing MCP manifest reference")
     require(manifest["interface"]["category"] == "Developer Tools", "unexpected category")
     require(len(manifest["interface"]["shortDescription"]) <= 30, "short description is too long")
     require(len(manifest["interface"]["defaultPrompt"]) <= 3, "too many starter prompts")
 
     mcp = json.loads((PLUGIN / ".mcp.json").read_text(encoding="utf-8"))
-    require(mcp["mcpServers"]["atlas-scout"]["command"] == "atlas-scout", "wrong MCP command")
-    require(mcp["mcpServers"]["atlas-scout"]["args"] == ["mcp"], "wrong MCP arguments")
+    require(mcp["mcpServers"]["bitlantern"]["command"] == "bitlantern", "wrong MCP command")
+    require(mcp["mcpServers"]["bitlantern"]["args"] == ["mcp"], "wrong MCP arguments")
 
     for relative in ("assets/icon.png", "assets/logo.png"):
         dimensions = png_dimensions(PLUGIN / relative)
@@ -64,7 +64,7 @@ def main() -> None:
         require("mcpServers" not in uploaded_manifest, "skills-only manifest references MCP")
         require("apps" not in uploaded_manifest, "skills-only manifest references an app")
 
-    print("Atlas Scout Codex plugin validation passed")
+    print("Bit Lantern Codex plugin validation passed")
 
 
 if __name__ == "__main__":

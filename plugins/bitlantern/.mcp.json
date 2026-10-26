@@ -1,7 +1,7 @@
 {
   "mcpServers": {
-    "atlas-scout": {
-      "command": "atlas-scout",
+    "bitlantern": {
+      "command": "bitlantern",
       "args": [
         "mcp"
       ]

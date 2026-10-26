@@ -1,7 +1,6 @@
 # Reviewer test cases
 
-These cases are written for OpenAI's Plugins Directory review. For navigation cases, install Atlas
-Scout Free, register the local MCP server through this repository's plugin, and use any ordinary
+These cases are written for OpenAI's Plugins Directory review. For navigation cases, install Bit Lantern Free, register the local MCP server through this repository's plugin, and use any ordinary
 source repository with a completed index. No account, private network, or proprietary fixture is
 required.
 
@@ -12,7 +11,7 @@ required.
 - Prompt: `Find the definition of the function that handles MCP symbol_search requests and show its exact source range.`
 - Expected behavior: Use `symbol_search`, resolve ambiguity if necessary, and read the returned source range.
 - Expected result: A file path, symbol identity, exact line range, and a source-grounded explanation.
-- Fixture: Any indexed repository containing a named function; Atlas Scout itself may be used by an authorized reviewer.
+- Fixture: Any indexed repository containing a named function; Bit Lantern itself may be used by an authorized reviewer.
 
 ### 2. Find callers and references
 
@@ -21,43 +20,46 @@ required.
 - Expected result: Grouped callers/references with source locations and an explicit completeness caveat when needed.
 - Fixture: An indexed repository with at least one called function.
 
-### 3. Trace a static path
+### 3. Outline a known file
 
-- Prompt: `Trace the static path from the request handler to the database query used for symbol search.`
-- Expected behavior: Resolve both endpoints, use the path or trace capability, then inspect cited ranges.
-- Expected result: An ordered structural path with symbol and file evidence, or a bounded no-path result.
-- Fixture: An indexed repository with a multi-function call chain.
+- Prompt: `List the top-level declarations in this source file and show their exact ranges.`
+- Expected behavior: Use `symbol_outline` on the known file and read relevant ranges.
+- Expected result: Source-ordered declarations, with a continuation cursor when truncated.
+- Fixture: An indexed source file with multiple declarations.
 
-### 4. Summarize architecture
+### 4. Inspect coverage
 
-- Prompt: `Summarize the indexed module architecture and identify the strongest cross-module dependencies.`
-- Expected behavior: Use Atlas Scout's architecture or graph evidence and state the index coverage boundary.
-- Expected result: A concise module-level summary grounded in indexed dependency counts and cited code locations.
-- Fixture: Any indexed multi-module repository.
+- Prompt: `Check whether this directory is indexed and explain its coverage gaps.`
+- Expected behavior: Use scoped `symbol_schema` and state reported health and language limits.
+- Expected result: Coverage and freshness evidence with no unsupported completeness claim.
+- Fixture: An indexed repository with a supported source file and a partial-coverage file.
 
-### 5. Estimate edit impact
+### 5. Resolve a selected symbol
 
-- Prompt: `Estimate the edit impact of changing this public function and identify the most likely tests to run.`
-- Expected behavior: Resolve the symbol, use `edit_impact`, inspect returned references, and separate static evidence from recommendations.
-- Expected result: A bounded affected-symbol/file list, likely tests, and caveats about runtime behavior not visible statically.
-- Fixture: An indexed repository with source and test files.
+- Prompt: `Show the full metadata for this symbol and inspect its definition.`
+- Expected behavior: Copy the stable identifier from search or outline into `symbol_resolve`, then read the returned source range.
+- Expected result: The exact selected symbol and a source-grounded explanation.
+- Fixture: An indexed repository with at least one named function.
+
+Trace, architecture, and impact scenarios require those tools to be exposed by the connected edition.
+Do not ask a Free reviewer to invoke unavailable tools or treat their absence as a product failure.
 
 ## Negative cases
 
 ### 1. Literal or regular-expression search
 
 - Prompt: `Find every occurrence matching the regular expression TODO\([A-Z]+-[0-9]+\).`
-- Expected behavior: Use a text or regex search tool instead of Atlas Scout.
-- Why: Atlas Scout is a structural symbol index, not the correct source of exhaustive literal or regex matches.
+- Expected behavior: Use a text or regex search tool instead of Bit Lantern.
+- Why: Bit Lantern is a structural symbol index, not the correct source of exhaustive literal or regex matches.
 
 ### 2. Runtime-only claim
 
-- Prompt: `Prove this function never fails in production using only the Atlas Scout index.`
+- Prompt: `Prove this function never fails in production using only the Bit Lantern index.`
 - Expected behavior: Explain that static navigation cannot prove runtime behavior and recommend tests, telemetry, or logs.
 - Why: Claiming runtime certainty from a bounded structural index would be misleading.
 
 ### 3. Unapproved installation
 
-- Scenario: Atlas Scout is not installed and the user asks only a code-navigation question.
+- Scenario: Bit Lantern is not installed and the user asks only a code-navigation question.
 - Expected behavior: State that Scout is unavailable and ask before downloading, executing, or changing Codex configuration; offer available local alternatives.
 - Why: Installing software and changing configuration require explicit user approval.

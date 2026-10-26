@@ -1,20 +1,19 @@
-# Atlas Scout for Codex
+# Bit Lantern for Codex
 
-Atlas Scout is a local, read-only MCP server that gives Codex indexed definitions, exact source
+Bit Lantern is a local, read-only MCP server that gives Codex indexed definitions, exact source
 ranges, references, static call relationships, architecture summaries, and bounded edit impact for
 source repositories.
 
-This repository contains the inspectable Codex plugin wrapper. The separately installed Atlas
-Scout runtime remains proprietary software under the Atlas Scout license. Installing the wrapper
+This repository contains the inspectable Codex plugin wrapper. The separately installed Bit Lantern runtime remains proprietary software under the Bit Lantern license. Installing the wrapper
 does not download the runtime, run repository code, or send source code to Zaguán Labs.
 
 ## Requirements
 
 - Codex with plugin support
-- A supported Atlas Scout installation whose `atlas-scout` executable is on `PATH`
-- A workstation permitted to run the Atlas Scout preview
+- A supported Bit Lantern installation whose `bitlantern` executable is on `PATH`
+- A workstation permitted to run the Bit Lantern preview
 
-Atlas Scout previews for macOS and Windows do not yet carry Apple or Microsoft publisher
+Bit Lantern previews for macOS and Windows do not yet carry Apple or Microsoft publisher
 signatures. Review the [installation and platform-safety documentation](https://atlasscout.dev/docs)
 before installing the runtime. Do not weaken operating-system or organization security controls.
 
@@ -22,38 +21,40 @@ before installing the runtime. Do not weaken operating-system or organization se
 
 ### OpenAI Plugins Directory
 
-Atlas Scout is published in the universal Plugins Directory shared by ChatGPT and Codex:
+The existing universal Plugins Directory listing is shared by ChatGPT and Codex. It currently
+publishes Atlas Scout Preview 29; the Bit Lantern Preview 30 skills-only update is prepared and
+awaits portal submission:
 
 <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
 
-The directory entry installs the navigation and guarded setup skills. Atlas Scout remains a local
+The directory entry installs the navigation and guarded setup skills. Bit Lantern remains a local
 `stdio` MCP server, so users who want its structural tools must also install the runtime and the
 MCP-enabled marketplace plugin below. This preserves local indexing instead of routing source code
 through a hosted MCP service.
 
 ### Zaguán Labs Codex marketplace
 
-Install and verify the Atlas Scout runtime first:
+Install and verify the Bit Lantern runtime first:
 
 ```bash
-atlas-scout --version
-atlas-scout doctor --workspace /absolute/path/to/project
+bitlantern --version
+bitlantern doctor --workspace /absolute/path/to/project
 ```
 
 Add the Zaguán Labs marketplace and install the plugin:
 
 ```bash
 codex plugin marketplace add ZaguanLabs/atlas-scout-codex-plugin
-codex plugin add atlas-scout@atlas-scout
+codex plugin add bitlantern@bitlantern
 ```
 
 Start a new Codex thread after installation. Remove or disable any duplicate manually registered
-Atlas Scout MCP server so Codex starts only one copy. See [SETUP.md](SETUP.md) for troubleshooting
+Bit Lantern MCP server so Codex starts only one copy. See [SETUP.md](SETUP.md) for troubleshooting
 and removal instructions.
 
 ## What the plugin provides
 
-- A local `stdio` MCP connection that runs `atlas-scout mcp`
+- A local `stdio` MCP connection that runs `bitlantern mcp`
 - A code-navigation skill describing Scout's capabilities and coverage boundaries
 - A guarded setup skill that never downloads or executes the runtime without explicit approval
 
@@ -75,10 +76,10 @@ exhaustive.
 
 ## Data access
 
-Atlas Scout reads source files in the workspace selected by Codex and writes a disposable SQLite
+Bit Lantern reads source files in the workspace selected by Codex and writes a disposable SQLite
 index beneath that workspace. It sends navigation results to Codex because that is the plugin's
-requested function. Atlas Scout does not transmit source code, repository paths, symbols, queries,
-tool calls, editor state, Git remotes, or index metrics to the Atlas Scout licensing service.
+requested function. Bit Lantern does not transmit source code, repository paths, symbols, queries,
+tool calls, editor state, Git remotes, or index metrics to the Bit Lantern licensing service.
 
 The runtime does not execute repository code, hooks, package scripts, builds, or tests. A Free
 installation that has never been activated makes no licensing request. Previously activated
@@ -93,7 +94,7 @@ The repository validates both the MCP-enabled Codex plugin and the skills-only a
 python3 scripts/check.py
 ```
 
-The generated archive is written to `dist/atlas-scout-openai-skills-1.0.0-preview.29.zip`. Its
+The generated archive is written to `dist/bitlantern-openai-skills-1.0.0-preview.30.zip`. Its
 manifest intentionally omits `mcpServers`, and the archive contains no `.mcp.json` or `.app.json`.
 
 ## Support, privacy, and licensing
@@ -101,7 +102,7 @@ manifest intentionally omits `mcpServers`, and the archive contains no `.mcp.jso
 - Documentation: <https://atlasscout.dev/docs>
 - Support and security reports: <support@atlasscout.dev>
 - Privacy policy: <https://atlasscout.dev/legal/privacy>
-- Atlas Scout EULA: <https://atlasscout.dev/legal/eula>
+- Bit Lantern EULA: <https://atlasscout.dev/legal/eula>
 
-The Apache-2.0 license in this repository covers only the Codex plugin wrapper. The Atlas Scout
+The Apache-2.0 license in this repository covers only the Codex plugin wrapper. The Bit Lantern
 executable, product source, and other product materials remain governed by their separate EULA.

@@ -1,14 +1,14 @@
 {
-  "name": "atlas-scout",
+  "name": "bitlantern",
   "interface": {
-    "displayName": "Atlas Scout"
+    "displayName": "Bit Lantern"
   },
   "plugins": [
     {
-      "name": "atlas-scout",
+      "name": "bitlantern",
       "source": {
         "source": "local",
-        "path": "./plugins/atlas-scout"
+        "path": "./plugins/bitlantern"
       },
       "policy": {
         "installation": "AVAILABLE",
