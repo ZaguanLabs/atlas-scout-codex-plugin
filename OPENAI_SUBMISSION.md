@@ -5,6 +5,8 @@ The pending Preview 30 package uses the Bit Lantern name. Update the existing li
 ## Preview 30 publication status
 
 - Status: native Preview 30 verified public; exact skills-only ZIP prepared; portal submission pending
+- GitHub marketplace: signed tag `v1.0.0-preview.30`, commit `3b8e12b5316c2dfdc796efd35e4b935cf3f19e53`, published 2026-10-26; live acceptance passed
+- Portal access: no connected signed-in browser; no Preview 30 scan, submission, approval, or publication observed
 - Pending version: `1.0.0-preview.30`
 - Last published version: `1.0.0-preview.29` (Atlas Scout), 2026-08-17
 - Listing: <https://chatgpt.com/plugins/plugins_6a6e427dd300819196d41d5d1f24da50>
